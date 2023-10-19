@@ -2,6 +2,8 @@
 
 from pico2d import get_time, load_image, SDL_KEYDOWN, SDL_KEYUP, SDLK_SPACE, SDLK_LEFT, SDLK_RIGHT
 
+import game_world
+from ball import Ball
 # state event check
 # ( state event type, event value )
 
@@ -164,6 +166,8 @@ class Boy:
         self.state_machine.draw()
 
     def fire_ball(self):
+        ball = Ball()
+        game_world.add(ball)
         if self.face_dir == 1:
             print("R 발싸")
         elif self.face_dir == -1:
