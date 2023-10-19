@@ -167,7 +167,7 @@ class Boy:
 
     def fire_ball(self):
         ball = Ball(self.x, self.y, self.face_dir * 8)
-        game_world.add_object(ball)
+        game_world.add_object(ball, 1)
         if self.face_dir == 1:
             print("R 발싸")
         elif self.face_dir == -1:
