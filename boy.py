@@ -166,8 +166,8 @@ class Boy:
         self.state_machine.draw()
 
     def fire_ball(self):
-        ball = Ball()
-        game_world.add(ball)
+        ball = Ball(self.x, self.y, self.face_dir * 8)
+        game_world.add_object(ball)
         if self.face_dir == 1:
             print("R 발싸")
         elif self.face_dir == -1:

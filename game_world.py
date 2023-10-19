@@ -6,7 +6,7 @@ objects = []
 
 #월드에 객체를 넣는 함수
 
-def add(o):
+def add_object(o):
     objects.append(o)
 
 #월드를 업데이트하는 업데이트 하는 함수
@@ -20,5 +20,6 @@ def update():
 def render():
     for o in objects:
         o.draw()
-
-
+#객체 삭제
+def remove_object(o):
+    objects.remove(o)
